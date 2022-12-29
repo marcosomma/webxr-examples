@@ -51,6 +51,7 @@
         width: 90%;
         height: 90vh;
         margin: 0 auto;
+        color: #205252;
       }
       header {
         background-color: #86c5c5;
@@ -66,14 +67,30 @@
       .main-container {
         background-color: #ffffff;
         height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        justify-content: space-evenly;
+        padding: 10px 0px;
+        border: 2px solid #205252;
+      }
+      .list-container {
+        background-color: #ffffff;
+        border: 0.5px solid #000000;
+        width: 30%;
+        margin-bottom: 20px;
       }
       .list-label {
-        color: #323232; 
+        color: #fff;
         padding-left: 10px;
         margin-bottom: 5px;
+        margin-top: 0px;
+        background-color: #000000;
+        line-height: 2em;
       }
       ul {
         margin: 0px;
+        padding-left: 20px;
       }
     </style>
   </head>
@@ -82,19 +99,26 @@
       <h1>Welcome to "Examles AR/VR"</h1>
     </header>
     <div class="main-container">
-      <h4 class="list-label">Basics</h4>
-      <ul>
-        <li>
-          <a href="./pages/exp01/index.html" target="_blank">
-            01 - Simple Cube</a
-          >
-        </li>
-        <li>
-          <a href="./pages/exp02/index.html" target="_blank">
-            02 - Earth and Moon</a
-          >
-        </li>
-      </ul>
+      <div class="list-container">
+        <h4 class="list-label">Three.JS basics</h4>
+        <ul>
+          <li>
+            <a href="./pages/exp01/index.html" target="_blank">
+              01 - Simple Cube</a
+            >
+          </li>
+          <li>
+            <a href="./pages/exp02/index.html" target="_blank">
+              02 - Earth and Moon</a
+            >
+          </li>
+          <li>
+            <a href="./pages/exp03/index.html" target="_blank">
+              03 - Geometry
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <footer>
       <code> by <a href="https://github.com/marcosomma">Marco Somma</a></code>
