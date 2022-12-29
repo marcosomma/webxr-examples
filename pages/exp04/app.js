@@ -19,7 +19,7 @@ class App {
     this.scene.background = new THREE.Color(0x002222);
 
     // Set up LIGHTS
-    const ambient = new THREE.HemisphereLight(0xffffff, 0x0000ff, 0.3);
+    const ambient = new THREE.HemisphereLight(0xffffff, 0x0000ff, 0.5);
     const light = new THREE.DirectionalLight();
     light.position.set(0.2, 1, 1);
 
@@ -34,10 +34,12 @@ class App {
     const box = new THREE.BoxBufferGeometry();
     const circle = new THREE.CircleBufferGeometry(.5, 32, 0, Math.PI);
     const cone = new THREE.ConeBufferGeometry(.5, 1, 24);
-    const material = new THREE.MeshStandardMaterial({ color: 0xff0000, side: THREE.DoubleSide });
-    this.meshBox = new THREE.Mesh(box, material);
-    this.meshCircle = new THREE.Mesh(circle, material);
-    this.meshCone = new THREE.Mesh(cone, material);
+    const material1 = new THREE.MeshStandardMaterial({ color: 0xff0000, side: THREE.DoubleSide });
+    const material2 = new THREE.MeshLambertMaterial({ color: 0x00ff00, side: THREE.DoubleSide });
+    const material3 = new THREE.MeshPhongMaterial({ color: 0x0000ff, side: THREE.DoubleSide, specular: 0xffffff });
+    this.meshBox = new THREE.Mesh(box, material1);
+    this.meshCircle = new THREE.Mesh(circle, material2);
+    this.meshCone = new THREE.Mesh(cone, material3);
 
     // Add to the SCENE
     this.scene.add(ambient);
@@ -51,6 +53,9 @@ class App {
 
     // Add resizeEvent listener
     window.addEventListener("resize", this.resize.bind(this));
+        
+    this.controls = new OrbitControls( this.camera, this.renderer.domElement );
+    this.controls.update();
   }
 
   resize() {
