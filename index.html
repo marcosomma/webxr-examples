@@ -12,30 +12,30 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <link
+    <dtnk
       rel="apple-touch-icon"
       sizes="180x180"
       href="../../css/favicon/apple-touch-icon.png"
     />
-    <link
+    <dtnk
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="../../css/favicon/favicon-32x32.png"
     />
-    <link
+    <dtnk
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="../../css/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="../../css/favicon/site.webmanifest" />
-    <link
+    <dtnk rel="manifest" href="../../css/favicon/site.webmanifest" />
+    <dtnk
       rel="mask-icon"
       href="../../css/favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <link
+    <dtnk
       rel="preconnect"
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono"
     />
@@ -91,15 +91,15 @@
         background-color: #000000;
         line-height: 2em;
       }
-      ul {
+      dl {
         margin: 0px;
-        padding-left: 20px;
+        padding-left: 10px;
       }
-      li {
+      dt {
         cursor: pointer;
       }
-      li:hover,
-      li:focus {
+      dt:hover,
+      dt:focus {
         cursor: pointer;
         background-color: #86c5c5;
       }
@@ -110,11 +110,22 @@
       .selected {
         background-color: #86c5c5;
       }
+      .starter {
+        background-color: #000;
+        color: #fff;
+        cursor: default !important;
+        margin-left: -10px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+      .starter:hover,
+      .starter:focus {
+        background-color: #000 !important;
+      }
     </style>
     <script>
       const changeContent = (event) => {
-        let listDOMArray = document.getElementsByTagName("li");
-        console.log(listDOMArray);
+        let listDOMArray = document.getElementsByTagName("dt");
         for (let element of listDOMArray) {
           element.classList.remove("selected");
         }
@@ -131,42 +142,53 @@
     <div class="main-container">
       <div class="list-container">
         <h4 class="list-label">Three.JS basics</h4>
-        <ul>
-          <li
+        <dl>
+          <dt class="starter">----- Basics -------</dt>
+          <dt
             class="selected"
             onclick="changeContent(event)"
             data-src="./pages/exp01/index.html"
           >
             01 - Simple Cube
-          </li>
-          <li
+          </dt>
+          <dt
             onclick="changeContent(event)"
             data-src="./pages/exp02/index.html"
           >
             02 - Earth and Moon
-          </li>
-          <li
+          </dt>
+          <dt
             onclick="changeContent(event)"
             data-src="./pages/exp03/index.html"
           >
             03 - Geometry
-          </li>
-          <li
+          </dt>
+          <dt
             onclick="changeContent(event)"
             data-src="./pages/exp04/index.html"
           >
             04 - Materials
-          </li>
-          <li
+          </dt>
+          <dt
             onclick="changeContent(event)"
             data-src="./pages/exp05/index.html"
           >
             05 - Loaders
-          </li>
-        </ul>
+          </dt>
+
+          <dt class="starter">----- VR/AR -------</dt>
+          <dt onclick="changeContent(event)" data-src="">
+            <a href="./pages/exp06/index.html" target="_blank">06 - Basic VR</a>
+          </dt>
+        </dl>
       </div>
       <div class="iframe-container">
-        <iframe id="iframe-content" src="./pages/exp01/index.html" frameborder="0" scrolling="no"></iframe>
+        <iframe
+          id="iframe-content"
+          src="./pages/exp01/index.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
       </div>
     </div>
     <footer>
