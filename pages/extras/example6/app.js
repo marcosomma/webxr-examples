@@ -12,7 +12,7 @@ class App{
 		const container = document.createElement( 'div' );
 		document.body.appendChild( container );
 
-		this.assetsPath = '../../assets/';
+		this.assetsPath = '../../../assets/';
         
 		this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 3000 );
 		this.camera.position.set( 0, 1.6, 0 );

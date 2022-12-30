@@ -6,10 +6,10 @@
 		<title>Simple AR example</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<script src="../../libs/three/three.min.js"></script>
- 		<script module src="../../libs/mozilla/webxr.js"></script>
-		<link rel="stylesheet" href="../../css/common.css"/>
-		<script src="../../assets/TeapotBufferGeometry.js"></script>
+		<script src="../../../libs/three/three.min.js"></script>
+ 		<script module src="../../../libs/mozilla/webxr.js"></script>
+		<link rel="stylesheet" href="../../../css/common.css"/>
+		<script src="../../../assets/TeapotBufferGeometry.js"></script>
 	</head>
 	<body>
 		<div id="description">
@@ -26,10 +26,10 @@
 			document.getElementById('description').addEventListener('touchstart', hideMe, {capture: true})
 
 			// some dependencies and utilities
-			import * as mat4 from '../libs/mozilla/gl-matrix/mat4.js'
-			import * as vec3 from '../libs/mozilla/gl-matrix/vec3.js'
+			import * as mat4 from '../../libs/mozilla/gl-matrix/mat4.js'
+			import * as vec3 from '../../libs/mozilla/gl-matrix/vec3.js'
 
-			import XREngine from "../libs/mozilla/XREngine.js"
+			import XREngine from "../../libs/mozilla/XREngine.js"
 
 			let device = null
 			let session = null
